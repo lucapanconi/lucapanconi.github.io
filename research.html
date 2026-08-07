@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Research — Luca Panconi</title>
+    <meta
+      name="description"
+      content="Research themes, conference talks and poster presentations by Luca Panconi."
+    />
+    <link rel="icon" href="assets/img/profile.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      (function () {
+        try {
+          var s = localStorage.getItem("theme");
+          var d =
+            s === "dark" ||
+            (s === null &&
+              matchMedia("(prefers-color-scheme: dark)").matches);
+          document.documentElement.setAttribute(
+            "data-theme",
+            d ? "dark" : "light"
+          );
+        } catch (e) {}
+      })();
+    </script>
+    <script src="assets/data/content.js" defer></script>
+    <script src="assets/js/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header data-render="nav"></header>
+
+    <main id="main">
+      <section class="section" style="border-top: 0; padding-bottom: 0">
+        <div class="container">
+          <div class="section__head">
+            <span class="section__eyebrow">Research</span>
+            <h2 class="section__title">
+              Quantifying biology that is too small, too fast, or too noisy to
+              see directly
+            </h2>
+            <p class="section__lede">
+              My work sits between mathematics and cell biology. Microscopy
+              produces enormous, sparse and often ambiguous data; the interesting
+              question is usually not what an image looks like, but what can be
+              measured from it reliably. I build methods — topological,
+              statistical and increasingly generative — that make those
+              measurements possible, and then apply them to membrane
+              organisation, cell signalling and immunotherapy.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="border-top: 0">
+        <div class="container">
+          <div class="section__head">
+            <span class="section__eyebrow">Themes</span>
+            <h2 class="section__title">Core areas</h2>
+          </div>
+          <div data-render="focus"></div>
+        </div>
+      </section>
+
+      <section class="section section--soft">
+        <div class="container">
+          <div class="section__head">
+            <span class="section__eyebrow">Dissemination</span>
+            <h2 class="section__title">Conference talks and seminars</h2>
+          </div>
+          <div data-render="timeline" data-source="talks"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section__head">
+            <span class="section__eyebrow">Dissemination</span>
+            <h2 class="section__title">Poster presentations</h2>
+          </div>
+          <div data-render="timeline" data-source="posters"></div>
+        </div>
+      </section>
+
+      <section class="section section--soft">
+        <div class="container">
+          <div class="section__head">
+            <span class="section__eyebrow">Peer review</span>
+            <h2 class="section__title">Manuscripts reviewed</h2>
+          </div>
+          <div data-render="reviewing"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer data-render="footer"></footer>
+  </body>
+</html>

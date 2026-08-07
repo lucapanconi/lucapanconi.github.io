@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Luca Panconi — Computational Biologist</title>
+    <meta
+      name="description"
+      content="Luca Panconi, PhD — computational biologist working on machine learning, computer vision and topological data analysis for biomedical imaging."
+    />
+    <meta name="author" content="Luca Panconi" />
+    <meta property="og:title" content="Luca Panconi — Computational Biologist" />
+    <meta
+      property="og:description"
+      content="Machine learning, computer vision and topological data analysis for biomedical imaging."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/img/profile.jpg" />
+    <link rel="icon" href="assets/img/profile.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      (function () {
+        try {
+          var s = localStorage.getItem("theme");
+          var d =
+            s === "dark" ||
+            (s === null &&
+              matchMedia("(prefers-color-scheme: dark)").matches);
+          document.documentElement.setAttribute(
+            "data-theme",
+            d ? "dark" : "light"
+          );
+        } catch (e) {}
+      })();
+    </script>
+    <script src="assets/data/content.js" defer></script>
+    <script src="assets/js/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header data-render="nav"></header>
+
+    <main id="main">
+      <section class="hero" data-render="hero"></section>
+
+      <section class="section section--soft" id="about">
+        <div class="container">
+          <div class="section__head">
+            <span class="section__eyebrow">About</span>
+            <h2 class="section__title">A short introduction</h2>
+          </div>
+          <div data-render="about"></div>
+        </div>
+      </section>
+
+      <section class="section" id="research">
+        <div class="container">
+          <div class="section__head">
+            <span class="section__eyebrow">Research</span>
+            <h2 class="section__title">What I work on</h2>
+            <p class="section__lede">
+              Four threads run through most of my work. They tend to overlap: a
+              method built for one usually turns out to be useful for another.
+            </p>
+          </div>
+          <div data-render="focus"></div>
+        </div>
+      </section>
+
+      <section class="section section--soft" id="publications">
+        <div class="container">
+          <div class="section__head">
+            <span class="section__eyebrow">Selected work</span>
+            <h2 class="section__title">Featured publications</h2>
+          </div>
+          <div data-render="publications" data-featured="true"></div>
+          <p style="margin-top: 28px">
+            <a class="btn btn--ghost" href="publications.html"
+              >See all publications</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="container">
+          <div class="section__head">
+            <span class="section__eyebrow">Experience</span>
+            <h2 class="section__title">Recent positions</h2>
+          </div>
+          <div data-render="timeline" data-source="experience"></div>
+          <p style="margin-top: 32px">
+            <a class="btn btn--ghost" href="cv.html">Full curriculum vitae</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--soft" id="contact">
+        <div class="container">
+          <div class="contact">
+            <div>
+              <h2 class="contact__title">Get in touch</h2>
+              <p class="contact__text">
+                I am always happy to hear about new collaborations, student
+                projects, or applications of machine learning to imaging and
+                life science data.
+              </p>
+            </div>
+            <a class="btn btn--primary" href="mailto:luca.panconi@scilifelab.se"
+              >luca.panconi@scilifelab.se</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer data-render="footer"></footer>
+  </body>
+</html>

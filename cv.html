@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CV — Luca Panconi</title>
+    <meta
+      name="description"
+      content="Curriculum vitae of Luca Panconi: employment, education, teaching, academic service and awards."
+    />
+    <link rel="icon" href="assets/img/profile.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      (function () {
+        try {
+          var s = localStorage.getItem("theme");
+          var d =
+            s === "dark" ||
+            (s === null &&
+              matchMedia("(prefers-color-scheme: dark)").matches);
+          document.documentElement.setAttribute(
+            "data-theme",
+            d ? "dark" : "light"
+          );
+        } catch (e) {}
+      })();
+    </script>
+    <script src="assets/data/content.js" defer></script>
+    <script src="assets/js/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header data-render="nav"></header>
+
+    <main id="main">
+      <section class="section" style="border-top: 0">
+        <div class="container">
+          <div class="section__head">
+            <span class="section__eyebrow">Curriculum vitae</span>
+            <h2 class="section__title">Experience and background</h2>
+            <p class="section__lede">
+              A condensed version of my CV. The full document, including further
+              detail, is available as a PDF.
+            </p>
+          </div>
+          <p style="margin-bottom: 44px">
+            <a
+              class="btn btn--primary"
+              href="assets/files/Luca-Panconi-CV.pdf"
+              target="_blank"
+              rel="noopener"
+              >Download full CV (PDF)</a
+            >
+          </p>
+
+          <div class="section__head" style="margin-bottom: 20px">
+            <h3 class="section__eyebrow">Employment</h3>
+          </div>
+          <div data-render="timeline" data-source="experience"></div>
+        </div>
+      </section>
+
+      <section class="section section--soft">
+        <div class="container">
+          <div class="section__head">
+            <span class="section__eyebrow">Education</span>
+            <h2 class="section__title">Academic training</h2>
+          </div>
+          <div data-render="timeline" data-source="education"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section__head">
+            <span class="section__eyebrow">Teaching</span>
+            <h2 class="section__title">Teaching and supervision</h2>
+          </div>
+          <div data-render="timeline" data-source="teaching"></div>
+        </div>
+      </section>
+
+      <section class="section section--soft">
+        <div class="container">
+          <div class="section__head">
+            <span class="section__eyebrow">Service</span>
+            <h2 class="section__title">Academic service and outreach</h2>
+          </div>
+          <div data-render="timeline" data-source="service"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section__head">
+            <span class="section__eyebrow">Recognition</span>
+            <h2 class="section__title">Funding, awards and prizes</h2>
+          </div>
+          <div data-render="timeline" data-source="awards"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer data-render="footer"></footer>
+  </body>
+</html>
