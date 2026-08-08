@@ -16,8 +16,6 @@
   var ICON = {
     mail: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6 9-6"/></svg>',
     pin: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>',
-    download:
-      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 20h16"/></svg>',
     arrow:
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>',
     sun: '<svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.2 5.2l1.4 1.4M17.4 17.4l1.4 1.4M18.8 5.2l-1.4 1.4M6.6 17.4l-1.4 1.4"/></svg>',
@@ -30,17 +28,6 @@
     return String(str == null ? "" : str).replace(/[&<>"]/g, function (c) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
     });
-  }
-
-  function initials(name) {
-    return name
-      .split(/\s+/)
-      .map(function (w) {
-        return w[0];
-      })
-      .join("")
-      .slice(0, 2)
-      .toUpperCase();
   }
 
   function highlightSelf(authors) {
@@ -95,20 +82,18 @@
     host.className = "nav";
     host.innerHTML =
       '<div class="container nav__inner">' +
-      '<a class="nav__brand" href="' +
-      "index.html" +
-      '">' +
-      '<span class="nav__mark">' +
-      initials(S.profile.name) +
-      "</span>" +
+      '<a class="nav__brand" href="index.html">' +
+      '<img class="nav__photo" src="' +
+      esc(S.profile.photo) +
+      '" width="36" height="36" alt="">' +
       "<span>" +
       esc(S.profile.name) +
       "</span>" +
       "</a>" +
+      '<div class="nav__actions">' +
       '<nav class="nav__links" id="nav-links">' +
       links +
       "</nav>" +
-      '<div class="nav__actions">' +
       '<button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch colour theme">' +
       ICON.sun +
       ICON.moon +
@@ -163,12 +148,12 @@
     host.innerHTML =
       '<div class="container hero__inner">' +
       "<div>" +
-      '<span class="chip chip--accent"><span class="dot"></span>Open to research collaborations</span>' +
       '<h1 class="hero__name">' +
       esc(p.name) +
-      "<span>" +
+      "</h1>" +
+      '<p class="hero__degrees">' +
       esc(p.postnominals) +
-      "</span></h1>" +
+      "</p>" +
       '<p class="hero__role">' +
       esc(p.role) +
       " <em>at " +
@@ -178,14 +163,10 @@
       esc(p.tagline) +
       "</p>" +
       '<div class="hero__actions">' +
-      '<a class="btn btn--primary" href="' +
-      p.cv +
-      '" target="_blank" rel="noopener">' +
-      ICON.download +
-      "Download CV</a>" +
-      '<a class="btn btn--ghost" href="' +
-      "publications.html" +
-      '">' +
+      '<a class="btn btn--primary" href="#research">' +
+      ICON.arrow +
+      "My work</a>" +
+      '<a class="btn btn--ghost" href="publications.html">' +
       ICON.arrow +
       "View publications</a>" +
       "</div>" +
@@ -223,25 +204,8 @@
         return "<p>" + esc(t) + "</p>";
       })
       .join("");
-    var stats = S.stats
-      .map(function (s) {
-        return (
-          '<div class="stat"><div class="stat__value">' +
-          esc(s.value) +
-          '</div><div class="stat__label">' +
-          esc(s.label) +
-          "</div></div>"
-        );
-      })
-      .join("");
 
-    host.innerHTML =
-      '<div class="about__body">' +
-      paras +
-      "</div>" +
-      '<aside class="stats">' +
-      stats +
-      "</aside>";
+    host.innerHTML = '<div class="about__body">' + paras + "</div>";
     host.classList.add("about");
   }
 
@@ -358,6 +322,30 @@
       .join("");
   }
 
+  /* ---------------------------------------------------------------- contact */
+  function renderContact(host) {
+    host.className = "section";
+    host.id = host.id || "contact";
+    host.innerHTML =
+      '<div class="container">' +
+      '<div class="contact">' +
+      "<div>" +
+      '<h2 class="contact__title">Get in touch</h2>' +
+      '<p class="contact__text">' +
+      "I am always happy to hear about new collaborations, student " +
+      "projects, or applications of machine learning to imaging and " +
+      "life science data." +
+      "</p>" +
+      "</div>" +
+      '<a class="btn btn--primary" href="mailto:' +
+      esc(S.profile.email) +
+      '">' +
+      esc(S.profile.email) +
+      "</a>" +
+      "</div>" +
+      "</div>";
+  }
+
   /* ----------------------------------------------------------------- footer */
   function renderFooter(host) {
     var links = PAGES.map(function (p) {
@@ -414,6 +402,7 @@
     publications: renderPublications,
     reviewing: renderReviewing,
     timeline: renderTimeline,
+    contact: renderContact,
     footer: renderFooter,
   };
 

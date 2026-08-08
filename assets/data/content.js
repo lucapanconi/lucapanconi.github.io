@@ -10,12 +10,11 @@ window.SITE = {
       "Computational biologist working at the intersection of machine learning, computer vision and biomedical imaging.",
     email: "luca.panconi@scilifelab.se",
     photo: "assets/img/profile.jpg",
-    cv: "assets/files/Luca-Panconi-CV.pdf",
     links: [
       { label: "Email", href: "mailto:luca.panconi@scilifelab.se" },
       {
         label: "Google Scholar",
-        href: "https://scholar.google.com/scholar?q=Luca+Panconi",
+        href: "https://scholar.google.com/citations?user=2yK9zHcAAAAJ&hl=en&oi=ao",
       },
       { label: "GitHub", href: "https://github.com/lucapanconi" },
     ],
@@ -44,13 +43,6 @@ window.SITE = {
       title: "Computational immunotherapy",
       body: "Agent-based and data-driven models of T cell receptor signal transduction, aimed at informing and optimising therapeutic choices.",
     },
-  ],
-
-  stats: [
-    { value: "5", label: "First-author publications" },
-    { value: "10+", label: "Conferences presented" },
-    { value: "8+", label: "Years in Python & R" },
-    { value: "50+", label: "Research collaborations" },
   ],
 
   publications: [

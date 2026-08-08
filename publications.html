@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css?v=5" />
     <script>
       (function () {
         try {
@@ -31,8 +31,8 @@
         } catch (e) {}
       })();
     </script>
-    <script src="assets/data/content.js" defer></script>
-    <script src="assets/js/site.js" defer></script>
+    <script src="assets/data/content.js?v=5" defer></script>
+    <script src="assets/js/site.js?v=5" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -42,7 +42,6 @@
       <section class="section" style="border-top: 0">
         <div class="container">
           <div class="section__head">
-            <span class="section__eyebrow">Publications</span>
             <h2 class="section__title">Articles, preprints and books</h2>
             <p class="section__lede">
               Listed newest first. Titles link to the publisher record or
@@ -56,12 +55,13 @@
       <section class="section section--soft">
         <div class="container">
           <div class="section__head">
-            <span class="section__eyebrow">Peer review</span>
             <h2 class="section__title">Manuscripts reviewed</h2>
           </div>
           <div data-render="reviewing"></div>
         </div>
       </section>
+
+      <section data-render="contact"></section>
     </main>
 
     <footer data-render="footer"></footer>

@@ -6,7 +6,7 @@
     <title>Research — Luca Panconi</title>
     <meta
       name="description"
-      content="Research themes, conference talks and poster presentations by Luca Panconi."
+      content="Research themes and interests of Luca Panconi."
     />
     <link rel="icon" href="assets/img/profile.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css?v=5" />
     <script>
       (function () {
         try {
@@ -31,18 +31,17 @@
         } catch (e) {}
       })();
     </script>
-    <script src="assets/data/content.js" defer></script>
-    <script src="assets/js/site.js" defer></script>
+    <script src="assets/data/content.js?v=5" defer></script>
+    <script src="assets/js/site.js?v=5" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header data-render="nav"></header>
 
     <main id="main">
-      <section class="section" style="border-top: 0; padding-bottom: 0">
+      <section class="section" style="border-top: 0">
         <div class="container">
           <div class="section__head">
-            <span class="section__eyebrow">Research</span>
             <h2 class="section__title">
               Quantifying biology that is too small, too fast, or too noisy to
               see directly
@@ -57,48 +56,11 @@
               organisation, cell signalling and immunotherapy.
             </p>
           </div>
-        </div>
-      </section>
-
-      <section class="section" style="border-top: 0">
-        <div class="container">
-          <div class="section__head">
-            <span class="section__eyebrow">Themes</span>
-            <h2 class="section__title">Core areas</h2>
-          </div>
           <div data-render="focus"></div>
         </div>
       </section>
 
-      <section class="section section--soft">
-        <div class="container">
-          <div class="section__head">
-            <span class="section__eyebrow">Dissemination</span>
-            <h2 class="section__title">Conference talks and seminars</h2>
-          </div>
-          <div data-render="timeline" data-source="talks"></div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="section__head">
-            <span class="section__eyebrow">Dissemination</span>
-            <h2 class="section__title">Poster presentations</h2>
-          </div>
-          <div data-render="timeline" data-source="posters"></div>
-        </div>
-      </section>
-
-      <section class="section section--soft">
-        <div class="container">
-          <div class="section__head">
-            <span class="section__eyebrow">Peer review</span>
-            <h2 class="section__title">Manuscripts reviewed</h2>
-          </div>
-          <div data-render="reviewing"></div>
-        </div>
-      </section>
+      <section data-render="contact"></section>
     </main>
 
     <footer data-render="footer"></footer>

@@ -23,7 +23,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css?v=5" />
     <script>
       (function () {
         try {
@@ -39,8 +39,8 @@
         } catch (e) {}
       })();
     </script>
-    <script src="assets/data/content.js" defer></script>
-    <script src="assets/js/site.js" defer></script>
+    <script src="assets/data/content.js?v=5" defer></script>
+    <script src="assets/js/site.js?v=5" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -52,7 +52,6 @@
       <section class="section section--soft" id="about">
         <div class="container">
           <div class="section__head">
-            <span class="section__eyebrow">About</span>
             <h2 class="section__title">A short introduction</h2>
           </div>
           <div data-render="about"></div>
@@ -62,7 +61,6 @@
       <section class="section" id="research">
         <div class="container">
           <div class="section__head">
-            <span class="section__eyebrow">Research</span>
             <h2 class="section__title">What I work on</h2>
             <p class="section__lede">
               Four threads run through most of my work. They tend to overlap: a
@@ -76,7 +74,6 @@
       <section class="section section--soft" id="publications">
         <div class="container">
           <div class="section__head">
-            <span class="section__eyebrow">Selected work</span>
             <h2 class="section__title">Featured publications</h2>
           </div>
           <div data-render="publications" data-featured="true"></div>
@@ -91,7 +88,6 @@
       <section class="section" id="experience">
         <div class="container">
           <div class="section__head">
-            <span class="section__eyebrow">Experience</span>
             <h2 class="section__title">Recent positions</h2>
           </div>
           <div data-render="timeline" data-source="experience"></div>
@@ -101,23 +97,7 @@
         </div>
       </section>
 
-      <section class="section section--soft" id="contact">
-        <div class="container">
-          <div class="contact">
-            <div>
-              <h2 class="contact__title">Get in touch</h2>
-              <p class="contact__text">
-                I am always happy to hear about new collaborations, student
-                projects, or applications of machine learning to imaging and
-                life science data.
-              </p>
-            </div>
-            <a class="btn btn--primary" href="mailto:luca.panconi@scilifelab.se"
-              >luca.panconi@scilifelab.se</a
-            >
-          </div>
-        </div>
-      </section>
+      <section data-render="contact"></section>
     </main>
 
     <footer data-render="footer"></footer>

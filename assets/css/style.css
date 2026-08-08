@@ -172,17 +172,13 @@ ul {
   letter-spacing: -0.02em;
 }
 
-.nav__mark {
-  display: grid;
-  place-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 9px;
-  background: var(--text);
-  color: var(--bg);
-  font-size: 12.5px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
+.nav__photo {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  flex-shrink: 0;
 }
 
 .nav__links {
@@ -338,16 +334,6 @@ html[data-theme="dark"] .theme-toggle__moon {
   margin-bottom: 40px;
 }
 
-.section__eyebrow {
-  display: block;
-  margin-bottom: 12px;
-  color: var(--text-faint);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
 .section__title {
   font-family: var(--font-serif);
   font-size: clamp(1.75rem, 3.4vw, 2.3rem);
@@ -392,21 +378,19 @@ html[data-theme="dark"] .theme-toggle__moon {
 }
 
 .hero__name {
-  margin: 18px 0 0;
+  margin: 0;
   font-family: var(--font-serif);
   font-size: clamp(2.6rem, 6vw, 4rem);
   font-weight: 500;
   letter-spacing: -0.03em;
 }
 
-.hero__name span {
+.hero__degrees {
+  margin: 10px 0 0;
   color: var(--text-faint);
-  font-size: 0.42em;
-  font-family: var(--font-sans);
+  font-size: 16px;
   font-weight: 500;
-  letter-spacing: 0;
-  vertical-align: 0.42em;
-  margin-left: 8px;
+  letter-spacing: 0.01em;
 }
 
 .hero__role {
@@ -480,11 +464,8 @@ html[data-theme="dark"] .theme-toggle__moon {
 /* ==========================================================================
    About
    ========================================================================== */
-.about {
-  display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
-  align-items: start;
-  gap: 56px;
+.about__body {
+  max-width: 74ch;
 }
 
 .about__body p {
@@ -495,36 +476,6 @@ html[data-theme="dark"] .theme-toggle__moon {
 
 .about__body p:first-child {
   color: var(--text);
-}
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-
-.stat {
-  padding: 22px;
-  background: var(--bg-elevated);
-}
-
-.stat__value {
-  font-family: var(--font-serif);
-  font-size: 2.1rem;
-  font-weight: 500;
-  letter-spacing: -0.03em;
-  line-height: 1;
-}
-
-.stat__label {
-  margin-top: 8px;
-  font-size: 13.5px;
-  color: var(--text-faint);
-  line-height: 1.4;
 }
 
 /* ==========================================================================
@@ -811,10 +762,6 @@ html[data-theme="dark"] .theme-toggle__moon {
     justify-self: start;
     max-width: 176px;
     order: -1;
-  }
-  .about {
-    grid-template-columns: 1fr;
-    gap: 34px;
   }
   .grid--2 {
     grid-template-columns: 1fr;

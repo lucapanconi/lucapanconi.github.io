@@ -6,7 +6,7 @@
     <title>CV — Luca Panconi</title>
     <meta
       name="description"
-      content="Curriculum vitae of Luca Panconi: employment, education, teaching, academic service and awards."
+      content="Curriculum vitae of Luca Panconi: education, employment, teaching, academic service and awards."
     />
     <link rel="icon" href="assets/img/profile.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css?v=5" />
     <script>
       (function () {
         try {
@@ -31,8 +31,8 @@
         } catch (e) {}
       })();
     </script>
-    <script src="assets/data/content.js" defer></script>
-    <script src="assets/js/site.js" defer></script>
+    <script src="assets/data/content.js?v=5" defer></script>
+    <script src="assets/js/site.js?v=5" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -42,44 +42,46 @@
       <section class="section" style="border-top: 0">
         <div class="container">
           <div class="section__head">
-            <span class="section__eyebrow">Curriculum vitae</span>
-            <h2 class="section__title">Experience and background</h2>
+            <h2 class="section__title">Education</h2>
             <p class="section__lede">
-              A condensed version of my CV. The full document, including further
-              detail, is available as a PDF.
+              A condensed overview of my education, employment and academic
+              activity.
             </p>
           </div>
-          <p style="margin-bottom: 44px">
-            <a
-              class="btn btn--primary"
-              href="assets/files/Luca-Panconi-CV.pdf"
-              target="_blank"
-              rel="noopener"
-              >Download full CV (PDF)</a
-            >
-          </p>
-
-          <div class="section__head" style="margin-bottom: 20px">
-            <h3 class="section__eyebrow">Employment</h3>
-          </div>
-          <div data-render="timeline" data-source="experience"></div>
+          <div data-render="timeline" data-source="education"></div>
         </div>
       </section>
 
       <section class="section section--soft">
         <div class="container">
           <div class="section__head">
-            <span class="section__eyebrow">Education</span>
-            <h2 class="section__title">Academic training</h2>
+            <h2 class="section__title">Employment</h2>
           </div>
-          <div data-render="timeline" data-source="education"></div>
+          <div data-render="timeline" data-source="experience"></div>
         </div>
       </section>
 
       <section class="section">
         <div class="container">
           <div class="section__head">
-            <span class="section__eyebrow">Teaching</span>
+            <h2 class="section__title">Conference talks and seminars</h2>
+          </div>
+          <div data-render="timeline" data-source="talks"></div>
+        </div>
+      </section>
+
+      <section class="section section--soft">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Poster presentations</h2>
+          </div>
+          <div data-render="timeline" data-source="posters"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section__head">
             <h2 class="section__title">Teaching and supervision</h2>
           </div>
           <div data-render="timeline" data-source="teaching"></div>
@@ -89,7 +91,6 @@
       <section class="section section--soft">
         <div class="container">
           <div class="section__head">
-            <span class="section__eyebrow">Service</span>
             <h2 class="section__title">Academic service and outreach</h2>
           </div>
           <div data-render="timeline" data-source="service"></div>
@@ -99,12 +100,13 @@
       <section class="section">
         <div class="container">
           <div class="section__head">
-            <span class="section__eyebrow">Recognition</span>
             <h2 class="section__title">Funding, awards and prizes</h2>
           </div>
           <div data-render="timeline" data-source="awards"></div>
         </div>
       </section>
+
+      <section data-render="contact"></section>
     </main>
 
     <footer data-render="footer"></footer>
