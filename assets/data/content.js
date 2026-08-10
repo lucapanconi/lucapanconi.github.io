@@ -24,6 +24,10 @@ window.SITE = {
         href: "https://scholar.google.com/citations?user=2yK9zHcAAAAJ&hl=en&oi=ao",
       },
       { label: "GitHub", href: "https://github.com/lucapanconi" },
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/in/dr-luca-panconi",
+      },
     ],
   },
 
@@ -84,6 +88,14 @@ window.SITE = {
       doi: "https://doi.org/10.1101/2025.03.13.642965",
     },
     {
+      title:
+        "A generalised molecular dynamics simulator for tracking transmembrane protein aggregation",
+      authors:
+        "L. Panconi, O. Dalby, C. Zaza, D. M. Owen, S. Simoncelli, J. Griffi\u00e9",
+      venue: "Manuscript in preparation",
+      year: "2025",
+    },
+    {
       title: "Mapping membrane biophysical nano-environments",
       authors:
         "L. Panconi, J. Euchner, M. Makarova, D-P. Herten, D. M. Owen, D. J. Nieves",
@@ -132,14 +144,6 @@ window.SITE = {
       venue: "Journal of Biophotonics 16 (3)",
       year: "2023",
       doi: "https://doi.org/10.1002/jbio.202200199",
-    },
-    {
-      title:
-        "A generalised molecular dynamics simulator for tracking transmembrane protein aggregation",
-      authors:
-        "L. Panconi, O. Dalby, C. Zaza, D. M. Owen, S. Simoncelli, J. Griffi\u00e9",
-      venue: "Manuscript in preparation",
-      year: "",
     },
   ],
 

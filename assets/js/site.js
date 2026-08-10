@@ -8,7 +8,6 @@
 
   var PAGES = [
     { href: "index.html", label: "Home" },
-    { href: "research.html", label: "Research" },
     { href: "publications.html", label: "Publications" },
     { href: "cv.html", label: "CV" },
   ];
