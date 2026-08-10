@@ -4,10 +4,17 @@ window.SITE = {
     name: "Luca Panconi",
     postnominals: "PhD, MSci",
     role: "AI Application Specialist",
-    affiliation: "MIMER — the Swedish AI Factory",
+    affiliation: "MIMER (the Swedish AI Factory)",
     location: "Stockholm, Sweden",
-    tagline:
-      "Computational biologist working at the intersection of machine learning, computer vision and biomedical imaging.",
+    expertise: {
+      lead: "Expertise in:",
+      items: [
+        "Machine and deep learning.",
+        "Commercial AI.",
+        "Computational biology.",
+        "Computer vision.",
+      ],
+    },
     email: "luca.panconi@scilifelab.se",
     photo: "assets/img/profile.jpg",
     links: [
@@ -21,19 +28,19 @@ window.SITE = {
   },
 
   about: [
-    "I am a computational biologist with a background in mathematics, working on the parts of biology that only become visible once you can model them. My research combines machine learning, computer vision and topological data analysis to extract quantitative structure from microscopy data — from nanoscale protein organisation in cell membranes to the early decisions that determine a cell's fate.",
-    "I currently work as an AI Application Specialist at MIMER, the Swedish AI Factory, where I design scalable software, build production-grade machine learning pipelines, and deploy models on high-performance computing infrastructure. A large part of the role is consultancy: helping academic and industrial groups turn a research question into something that actually runs, and doing so responsibly.",
-    "Before that I held a RED Postdoctoral Fellowship at SciLifeLab, Stockholm University, developing AI-enhanced microscopy and image analysis for personalised medicine, and completed my PhD in Topological Design at the University of Birmingham. Alongside the research I enjoy teaching, supervising students and outreach work — much of what I know came from people who took the time to explain it well.",
+    "I am an expert in machine and deep learning, with a background in computational biology and mathematics. My research combines AI, computer vision and topological data analysis to perform quantitative analyses over commercial and biomedical datasets.",
+    "I currently work as an AI Application Specialist at MIMER, the Swedish AI Factory, where I design scalable software, build production-grade machine learning pipelines, and deploy models on high-performance computing infrastructure. In my role, I provide AI consultancy: helping academic and industrial groups implement AI solutions, and doing so responsibly.",
+    "I have previously held a RED Postdoctoral Fellowship at SciLifeLab in Stockholm, where I developed AI-enhanced microscopy and image analysis for personalised medicine. Prior to that, I completed my PhD in Topological Design at the University of Birmingham. Alongside the research I enjoy teaching, supervising students and outreach work.",
   ],
 
   focus: [
     {
-      title: "Machine learning for bioimaging",
-      body: "Deep generative models and flow matching applied to super-resolution microscopy, improving structural resolution and enabling interpretable prediction of cell behaviour.",
+      title: "Machine and deep learning",
+      body: "Everything from classical AI to deep generative models. I have worked with state-of-the-art models for image, video, graph, text and mesh datasets.",
     },
     {
       title: "Topological data analysis",
-      body: "Topology-based methods for segmenting and quantifying fluorescence microscopy data in two, three and four dimensions, without hand-tuned thresholds.",
+      body: "Topology-based methods for segmenting and quantifying biomedical datasets.",
     },
     {
       title: "Membrane biophysics",
@@ -163,7 +170,7 @@ window.SITE = {
       org: "MIMER, the Swedish AI Factory",
       points: [
         "Design scalable software solutions, build production-grade ML pipelines and deploy models on high-performance computing infrastructure.",
-        "Served as interim Team Coordinator for the Life Science Technical Team.",
+        "Served as interim Team Coordinator for the Life Science team.",
         "Provide AI consultancy to over 50 academic and industrial collaborators.",
         "Work across the full development lifecycle: prototyping, production coding, technical evaluation and deployment.",
         "Maintain DevOps and MLOps standards, with an emphasis on responsible and trustworthy use of AI.",

@@ -388,7 +388,7 @@ html[data-theme="dark"] .theme-toggle__moon {
 .hero__degrees {
   margin: 10px 0 0;
   color: var(--text-faint);
-  font-size: 16px;
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
   font-weight: 500;
   letter-spacing: 0.01em;
 }
@@ -406,11 +406,30 @@ html[data-theme="dark"] .theme-toggle__moon {
   font-weight: 450;
 }
 
-.hero__tagline {
-  max-width: 52ch;
-  margin: 16px 0 0;
-  color: var(--text-soft);
+.hero__expertise {
+  margin: 18px 0 0;
+  max-width: 42ch;
+}
+
+.hero__expertise-lead {
+  margin: 0 0 8px;
+  color: var(--text);
   font-size: 17.5px;
+  font-weight: 550;
+}
+
+.hero__expertise-list {
+  margin: 0;
+  padding: 0 0 0 1.2em;
+  list-style: disc;
+  color: var(--text-soft);
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.hero__expertise-list li {
+  margin: 0.2em 0;
+  padding-left: 0.15em;
 }
 
 .hero__actions {

@@ -159,9 +159,18 @@
       " <em>at " +
       esc(p.affiliation) +
       "</em></p>" +
-      '<p class="hero__tagline">' +
-      esc(p.tagline) +
+      '<div class="hero__expertise">' +
+      '<p class="hero__expertise-lead">' +
+      esc(p.expertise.lead) +
       "</p>" +
+      '<ul class="hero__expertise-list">' +
+      p.expertise.items
+        .map(function (item) {
+          return "<li>" + esc(item) + "</li>";
+        })
+        .join("") +
+      "</ul>" +
+      "</div>" +
       '<div class="hero__actions">' +
       '<a class="btn btn--primary" href="#research">' +
       ICON.arrow +
@@ -332,9 +341,8 @@
       "<div>" +
       '<h2 class="contact__title">Get in touch</h2>' +
       '<p class="contact__text">' +
-      "I am always happy to hear about new collaborations, student " +
-      "projects, or applications of machine learning to imaging and " +
-      "life science data." +
+      "I am always happy to hear about new collaborations, projects, " +
+      "or applications of machine learning." +
       "</p>" +
       "</div>" +
       '<a class="btn btn--primary" href="mailto:' +
